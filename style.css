@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+:root{
+
+    --whiteTitle: rgba(255, 255, 255, 0.9);
+    --whiteText: rgba(255, 255, 255, 0.8);
+    --blackTitle:#1B1D1F;
+}
+
+body{
+
+    color: var(--whiteTitle);
+}
+
+p{
+    color: var(--whiteText);
+    font-size: 1vw;
+    line-height: 1.5vw;
+}
+
+button{
+
+    font-size: .8vw;
+    width: 11vw;
+    height: 3vw;
+    border-radius: 200px;
+    font-weight: 500;
+    letter-spacing: .1vw;
+    border: none;
+    outline: none;
+}
+
+.container{
+
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+header{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    padding: 2% 4%;
+    z-index: 999;
+}
+
+.headerLogo, .headerIcons{
+
+    flex: 1;
+}
+
+.headerLogo img{
+
+    width: 12%;
+}
+
+.headerIcons{
+
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 2%;
+}
+
+.headerIcons img{
+
+    width:4% ;
+}
+
+.slider{
+
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+}
+
+.slide{
+
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0 8%;
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    transition: all .3s;
+}
+
+.slide.active{
+
+    z-index: 2;
+    opacity: 1;
+}
+
+.slide:nth-child(1){
+
+    background-image: url('img/nemo.jpg');
+}
+
+.slide:nth-child(2){
+
+    background-image: url('img/jellyFish.jpg');
+}
+
+.slide:nth-child(3){
+
+    background-image: url('img/pinguins.jpg');
+}
+
+
+.slide:nth-child(4){
+
+    background-image: url('img/lontras.jpg');
+}
+
+.slideContent{
+
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.slideContent h2{
+
+    font-size: 4.11vw;
+    font-weight: 800;
+    width: 100%;
+}
+
+.slideContent h2:nth-child(2){
+
+    font-size: 1.6vw;
+    font-weight: 700;
+    text-align: right;
+    padding-right: 8px;
+}
+
+.slideContent p{
+
+    padding-bottom: 1.8vw;
+    width: 72%;
+
+}
+
+.divButton{
+
+    display: flex;
+    gap: 2%;
+
+}
+
+.primaryButton{
+
+    background-color: var(--whiteText);
+    color: var(--blackTitle);
+}
+
+.secondaryButton{
+
+    background-color:rgba(255, 255, 255, 0.056);
+    border: 1.4px solid var(--whiteText);
+    color: var(--whiteText);
+}
+
+.navigation{
+
+    position: absolute;
+    bottom: 8%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 4%;
+    z-index: 10;
+}
+
+.bullets{
+
+    display: flex;
+    gap: 1%;
+    width: 50%;
+}
+
+.bullets li{
+
+    list-style-type: none;
+    content: "";
+    width: 1.4vw;
+    height: .3vw;
+    background-color: var(--whiteText);
+    border-radius: 200px;
+    opacity: .5;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.bullets li:hover:not(li.active){
+
+    opacity: .8;
+}
+
+.bullets li.active{
+
+    opacity: 1;
+}
+
+.navButtons{
+
+    display: flex;
+    gap: 2%;
+    width: 50%;
+    justify-content: end;
+
+}
+
+.navButtons button{
+
+    width: 3vw;
+}
